@@ -8,7 +8,7 @@ const App = () => {
            <li>test</li>
         </ul>
         <nav>
-          <p>Made by Michael Novicio</p>
+          <p>Made by Michael Novicio!</p>
         </nav>
       </section>
       <section className="main">
@@ -22,7 +22,7 @@ const App = () => {
               <div id="submit">➢</div>
             </div>
             <p className= "info">
-              ZodiGPT Aug 19 Version. This is a project made to 
+              ZodiGPT Aug 19 Version. This is a project made to learn about React.js, and to 
               understand how the OpenAPI works!
             </p>
         </div>
