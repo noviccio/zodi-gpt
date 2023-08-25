@@ -6,7 +6,7 @@ app.use(express.json()); //allows json to be used when sending from backend to f
 app.use(cors()); 
 
 //insert api key
-const API_KEY = ''
+const API_KEY = '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'
 
 //make express root. Parameters will be the route, requests and response
 app.post('/completions', async(req,res) => {
@@ -32,7 +32,7 @@ app.post('/completions', async(req,res) => {
         res.send(data)
 
     } catch (error){
-        console.error(error)
+        console.error(error) 
     }
 })
 
