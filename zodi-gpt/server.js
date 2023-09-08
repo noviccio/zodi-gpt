@@ -6,7 +6,7 @@ app.use(express.json()); //allows json to be used when sending from backend to f
 app.use(cors()); 
 
 //insert api key
-const API_KEY = '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'
+const API_KEY = ''
 
 //make express root. Parameters will be the route, requests and response
 app.post('/completions', async(req,res) => {
@@ -20,7 +20,7 @@ app.post('/completions', async(req,res) => {
         },
         body: JSON.stringify({ //request body
             model : "gpt-3.5-turbo",
-            messages: [{role: "user", content: "how are you?"}],
+            messages: [{role: "user", content: req.body.message}],
             max_tokens: 100, 
         })
     }

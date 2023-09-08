@@ -5,7 +5,16 @@ import { useState, useEffect} from 'react'
 const App = () => { //creates an app function that returns HTML
 
   const [value, setValue] = useState(null)
-  const [ message, setMessage] = useState(null)
+  const [message, setMessage] = useState(null)
+  const [previousChats, setPreviousChats] = useState([])
+  const [currentTitle, setCurrentTitle] = useState(null)
+
+  const createNewChat = () => {
+    setMessage(null)
+    setValue("")
+    setCurrentTitle(null)
+  }
+
 
   const getMessages = async () => {
 
@@ -30,14 +39,41 @@ const App = () => { //creates an app function that returns HTML
     }
   }
 
+  useEffect(() => {
 
+    console.log(currentTitle, value, message)
+    if (!currentTitle && value && message){
+      setCurrentTitle(value)
+    }
+    if (currentTitle && value && message){
+      setPreviousChats(prevChats =>(
+        [...prevChats, 
+          {
+              title: currentTitle,
+              role: "user",
+              content: value
 
+          }, 
+          {
+              title: currentTitle,
+              role: message.role,
+              content: message.content
+          }
+        ]
+      ))
 
+    }
 
+  }, [message, currentTitle] )
+
+  console.log(previousChats)
+
+  const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
+ 
   return (
     <div className="App">
       <section className="side-bar">
-        <button>+ New chat</button>
+        <button onClick={createNewChat}>+ New chat</button>
         <ul className="history">
            <li>test</li>
         </ul>
@@ -46,8 +82,12 @@ const App = () => { //creates an app function that returns HTML
         </nav>
       </section>
       <section className="main">
-        <h1>ZodiGPT</h1>
+        {!currentTitle && <h1>ZodiGPT</h1>}
         <ul className="feed">
+          {currentChat.map((chatMessage, index) => <li key={index}>
+              <p className = "role"> {chatMessage.role}</p>
+              <p></p>
+          </li>)}
 
         </ul>
         <div className ="bottom-section">
