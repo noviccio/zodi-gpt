@@ -15,6 +15,12 @@ const App = () => { //creates an app function that returns HTML
     setCurrentTitle(null)
   }
 
+  const handleClick = (uniqueTitle) => {
+    setCurrentTitle(uniqueTitle)
+    setMessage(null)
+    setValue("")
+  }
+
 
   const getMessages = async () => {
 
@@ -69,13 +75,16 @@ const App = () => { //creates an app function that returns HTML
   console.log(previousChats)
 
   const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
- 
+  const uniqueTitles = Array.from (new Set (previousChats.map(previousChat => previousChat.title)))
+  console.log(uniqueTitles)
+
+
   return (
     <div className="App">
       <section className="side-bar">
         <button onClick={createNewChat}>+ New chat</button>
         <ul className="history">
-           <li>test</li>
+           {uniqueTitles?.map((uniqueTitle, index) =>  <li key={index} onClick = {() => handleClick(uniqueTitle)}>{uniqueTitle}</li>)}
         </ul>
         <nav>
           <p>Made by Michael Novicio!</p>
@@ -84,11 +93,10 @@ const App = () => { //creates an app function that returns HTML
       <section className="main">
         {!currentTitle && <h1>ZodiGPT</h1>}
         <ul className="feed">
-          {currentChat.map((chatMessage, index) => <li key={index}>
+          {currentChat?.map((chatMessage, index) => <li key={index}>
               <p className = "role"> {chatMessage.role}</p>
-              <p></p>
+              <p>{chatMessage.content}</p>
           </li>)}
-
         </ul>
         <div className ="bottom-section">
             <div className="input-container">

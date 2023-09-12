@@ -1,13 +1,13 @@
 const PORT = 8000; //runs backend on port 8000
 const express = require('express'); //alerts for middleware 
 const cors = require('cors');
+require('dotenv').config()
 const app = express();
 app.use(express.json()); //allows json to be used when sending from backend to frontend with post requests. 
 app.use(cors()); 
 
 //insert api key
-const API_KEY = ''
-
+const API_KEY = process.env.API_KEY
 //make express root. Parameters will be the route, requests and response
 app.post('/completions', async(req,res) => {
 
