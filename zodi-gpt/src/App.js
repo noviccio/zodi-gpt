@@ -104,7 +104,7 @@ const App = () => { //creates an app function that returns HTML
               <div id="submit" onClick={getMessages}>➢</div>
             </div>
             <p className= "info">
-              ZodiGPT Aug 19 Version. This is a project made to learn about React.js, and to 
+              ZodiGPT Sep 12 Version. This is a project made to learn more about React.js, and to 
               understand how the OpenAPI works!
             </p>
         </div>
