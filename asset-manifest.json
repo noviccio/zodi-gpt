@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zodi-gpt/static/css/main.ec8d045a.css",
+    "main.js": "/zodi-gpt/static/js/main.e9bf9cf1.js",
+    "index.html": "/zodi-gpt/index.html",
+    "main.ec8d045a.css.map": "/zodi-gpt/static/css/main.ec8d045a.css.map",
+    "main.e9bf9cf1.js.map": "/zodi-gpt/static/js/main.e9bf9cf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec8d045a.css",
+    "static/js/main.e9bf9cf1.js"
+  ]
+}
