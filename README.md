@@ -10,12 +10,10 @@ As of now, this project can only be run locally. A static site is currently up a
 Visit the site: https://noviccio.github.io/zodi-gpt
 
 ## Project Screen Shot(s)
-
-#### Example:   
-
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+Here is the title screen:
+![ZodiGPT2](https://github.com/noviccio/zodi-gpt/assets/97764462/4fc85e9b-fdb9-4dea-bf35-2a6061f1d235)
+Here is an example of a chat. 
+![ZodiGPT](https://github.com/noviccio/zodi-gpt/assets/97764462/bc43f343-bacf-4b24-9a13-71e3f33bc29e)
 
 ## Installation and Setup Instructions 
 
