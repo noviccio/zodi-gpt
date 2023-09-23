@@ -5,7 +5,7 @@ A ChatGPT clone and with the OpenAI API! Functionalities include conversation me
 
 ## Project Status
 
-As of now, this project can only be run locally. A static site is currently up and running on Github Pages, but I'm working on creating a backend server using AWS right now. 
+As of now, this project can only be run locally. A static site is currently up and running on Github Pages, but I'm working on creating a backend server using AWS right now. I'm also trying to take out this scrollbar in the middle of the screen. 
 
 Visit the site: https://noviccio.github.io/zodi-gpt
 
